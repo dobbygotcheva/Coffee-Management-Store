@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1500.0" style="-fx-background-color: LIGHTGREY" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupproject.LoginController">
+   <children>
+      <Text layoutX="494.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to *AppName*">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="72.0" />
+         </font>
+      </Text>
+      <Text layoutX="566.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter your username and password to log in">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="usernameBox" layoutX="634.0" layoutY="354.0" prefHeight="45.0" prefWidth="230.0" promptText="Username">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="logInButton" layoutX="712.0" layoutY="495.0" mnemonicParsing="false" onAction="#logIn" prefHeight="26.0" prefWidth="72.0" text="Log In" />
+      <Text fx:id="errorMessage" fill="RED" layoutX="635.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" opacity="0" text="Username or password invalid. Please try again or contact IT for help." textAlignment="CENTER" wrappingWidth="230.39999999999986">
+         <font>
+            <Font name="Tw Cen MT" size="18.0" />
+         </font></Text>
+      <PasswordField fx:id="passwordBox" layoutX="635.0" layoutY="422.0" prefHeight="46.0" prefWidth="230.0" promptText="Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+   </children>
+</AnchorPane>
