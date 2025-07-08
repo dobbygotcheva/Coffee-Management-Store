@@ -142,11 +142,11 @@ The application uses H2 in-memory database by default. The database schema is au
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is open source.
 
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+- Dobrinka Gotcheva
 
 ## 🙏 Acknowledgments
 
