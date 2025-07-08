@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="380.0" prefWidth="500.0" styleClass="root" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupproject.LoginController">
+   <children>
+      <!-- Background rectangle -->
+      <Rectangle width="500" height="380" fill="transparent" />
+      
+      <!-- Main login container -->
+      <StackPane layoutX="125" layoutY="60" prefWidth="250" prefHeight="260" styleClass="login-container">
+         <children>
+            <!-- Login form -->
+            <VBox spacing="15" alignment="CENTER" styleClass="form-container">
+               <children>
+                  <!-- Coffee icon/logo -->
+                  <Text text="☕" style="-fx-font-size: 40px; -fx-fill: #8d6748;" />
+                  
+                  <!-- Welcome text -->
+                  <Text text="Coffee Management Store" styleClass="welcome-text" />
+                  
+                  <!-- Subtitle -->
+                  <Text text="Please enter your credentials to continue" styleClass="subtitle-text" />
+                  
+                  <!-- Username field -->
+                  <TextField fx:id="usernameBox" promptText="Username" styleClass="text-field" prefWidth="180" prefHeight="32" />
+                  
+                  <!-- Password field -->
+                  <PasswordField fx:id="passwordBox" promptText="Password" styleClass="password-field" prefWidth="180" prefHeight="32" />
+                  
+                  <!-- Login button -->
+                  <Button fx:id="logInButton" text="Sign In" onAction="#logIn" styleClass="primary-button" prefWidth="180" prefHeight="32" />
+                  
+                  <!-- Error message -->
+                  <Text fx:id="errorMessage" styleClass="error-text" text="Invalid username or password. Please try again." opacity="0" textAlignment="CENTER" wrappingWidth="160" />
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+      
+      <!-- Decorative elements -->
+      <Text text="☕" layoutX="30" layoutY="50" style="-fx-font-size: 18px; -fx-fill: #e6d3b3;" />
+      <Text text="☕" layoutX="455" layoutY="320" style="-fx-font-size: 18px; -fx-fill: #e6d3b3;" />
+      <Text text="☕" layoutX="420" layoutY="75" style="-fx-font-size: 16px; -fx-fill: #e6d3b3;" />
+      <Text text="☕" layoutX="65" layoutY="300" style="-fx-font-size: 16px; -fx-fill: #e6d3b3;" />
+   </children>
+</AnchorPane>

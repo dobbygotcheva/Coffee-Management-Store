@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="root" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupproject.LoginController">
+   <children>
+      <!-- Background rectangle -->
+      <Rectangle width="900" height="600" fill="transparent" />
+      
+      <!-- Header -->
+      <VBox layoutX="0" layoutY="20" prefWidth="900" alignment="CENTER" spacing="10">
+         <children>
+            <HBox alignment="CENTER" spacing="20">
+               <children>
+                  <Button text="← Back to Dashboard" onAction="#backFromInvoice" 
+                          style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-background-color: #fff; -fx-text-fill: #2c3e50; -fx-background-radius: 20; -fx-padding: 8 16; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 0);" />
+                  <Text text="📄" style="-fx-font-size: 28px;" />
+                  <Text fx:id="titleInvoice" text="Create Invoice" styleClass="welcome-text" />
+               </children>
+            </HBox>
+            <Text text="Generate invoices for your customers" styleClass="subtitle-text" />
+         </children>
+      </VBox>
+      
+      <!-- Main content area -->
+      <StackPane layoutX="200" layoutY="120" prefWidth="500" prefHeight="300" styleClass="form-container">
+         <children>
+            <VBox alignment="CENTER" spacing="20">
+               <children>
+                  <Text text="📄" style="-fx-font-size: 48px;" />
+                  <Text text="Invoice Management" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-fill: #8d6748;" />
+                  <Text text="This feature allows you to create and manage invoices for your coffee shop customers." 
+                        style="-fx-font-size: 14px; -fx-fill: #a67c52; -fx-text-alignment: center;" 
+                        wrappingWidth="400" textAlignment="CENTER" />
+                  <Text text="Coming Soon..." style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-fill: #a67c52;" />
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+      
+      <!-- Footer -->
+      <VBox layoutX="0" layoutY="570" prefWidth="900" alignment="CENTER">
+         <children>
+            <Text text="☕ Coffee Management Store - Invoice Management System ☕" 
+                  style="-fx-font-size: 13px; -fx-fill: #8d6748;" />
+         </children>
+      </VBox>
+      
+      <!-- Decorative elements -->
+      <Text text="☕" layoutX="30" layoutY="80" style="-fx-font-size: 18px; -fx-fill: #e6d3b3;" />
+      <Text text="☕" layoutX="850" layoutY="520" style="-fx-font-size: 18px; -fx-fill: #e6d3b3;" />
+   </children>
+</AnchorPane>

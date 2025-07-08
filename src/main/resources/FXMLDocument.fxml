@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1400.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupproject.FXMLDocumentController">
+<children>
+    <!-- Background rectangle -->
+    <Rectangle width="1400" height="800" fill="transparent" />
+    
+    <!-- Header with improved design -->
+    <VBox layoutX="0" layoutY="20" prefWidth="1400" alignment="CENTER" spacing="15">
+        <children>
+            <HBox alignment="CENTER" spacing="35">
+                <children>
+                    <Text text="☕" style="-fx-font-size: 45px;" />
+                    <Text text="Inventory Management" styleClass="welcome-text" />
+                </children>
+            </HBox>
+            <Text text="Manage your coffee products and stock levels efficiently" styleClass="subtitle-text" />
+        </children>
+    </VBox>
+    
+    <!-- Back button positioned to the left -->
+    <Button text="← Back to Dashboard" onAction="#backToOverviewAction" 
+            style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-background-color: #fff; -fx-text-fill: #2c3e50; -fx-background-radius: 20; -fx-padding: 14 28; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 0);" 
+            layoutX="50" layoutY="25" />
+    
+    <!-- Main content area with improved spacing -->
+    <HBox layoutX="80" layoutY="140" prefWidth="1240" prefHeight="580" spacing="60">
+        <children>
+            <!-- Left panel - Form with improved design -->
+            <VBox prefWidth="520" spacing="20" styleClass="form-container">
+                <children>
+                    <HBox alignment="CENTER" spacing="20">
+                        <children>
+                            <Text text="📝" style="-fx-font-size: 24px;" />
+                            <Text text="Add New Product" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-fill: #2c3e50;" />
+                        </children>
+                    </HBox>
+                    
+                    <!-- Product ID -->
+                    <VBox spacing="10">
+                        <children>
+                            <Label text="Product ID:" styleClass="label" />
+                            <TextField fx:id="id" promptText="Enter product ID (e.g., COF001)" styleClass="text-field" prefHeight="48" />
+                        </children>
+                    </VBox>
+                    
+                    <!-- Product Name -->
+                    <VBox spacing="10">
+                        <children>
+                            <Label text="Product Name:" styleClass="label" />
+                            <TextField fx:id="name" promptText="Enter product name" styleClass="text-field" prefHeight="48" />
+                        </children>
+                    </VBox>
+                    
+                    <!-- Price -->
+                    <VBox spacing="10">
+                        <children>
+                            <Label text="Price ($):" styleClass="label" />
+                            <TextField fx:id="pw" promptText="Enter price (e.g., 3.50)" styleClass="text-field" prefHeight="48" />
+                        </children>
+                    </VBox>
+                    
+                    <!-- Quantity -->
+                    <VBox spacing="10">
+                        <children>
+                            <Label text="Quantity:" styleClass="label" />
+                            <TextField fx:id="qtys" promptText="Enter quantity" styleClass="text-field" prefHeight="48" />
+                        </children>
+                    </VBox>
+                    
+                    <!-- Action buttons with improved styling -->
+                    <HBox spacing="30" alignment="CENTER">
+                        <children>
+                            <Button fx:id="button" text="➕ Add Product" onAction="#handleButtonAction" styleClass="primary-button" prefWidth="180" prefHeight="52" 
+                                    style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #a67c52; -fx-text-fill: #fffaf3; -fx-background-radius: 15; -fx-padding: 15 30 15 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 6, 0, 0, 0);" />
+                            <Button fx:id="update" text="🔄 Update" onAction="#handleUpdateAction" styleClass="secondary-button" prefWidth="180" prefHeight="52" 
+                                    style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #8d6748; -fx-text-fill: #fffaf3; -fx-background-radius: 15; -fx-padding: 15 30 15 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 6, 0, 0, 0);" />
+                        </children>
+                    </HBox>
+                </children>
+            </VBox>
+            
+            <!-- Right panel - Table with improved design -->
+            <VBox prefWidth="780" spacing="20">
+                <children>
+                    <!-- Search bar with improved design -->
+                    <HBox spacing="25" alignment="CENTER_LEFT">
+                        <children>
+                            <Text text="🔍" style="-fx-font-size: 24px; -fx-fill: #8d6748;" />
+                            <TextField fx:id="search" promptText="Search products by name..." styleClass="search-field" prefWidth="600" prefHeight="48" />
+                        </children>
+                    </HBox>
+                    
+                    <!-- Table with improved styling -->
+                    <TableView fx:id="data_table" prefHeight="460" styleClass="table-view" 
+                              style="-fx-background-color: white; -fx-text-fill: black;">
+                        <columns>
+                            <TableColumn fx:id="data_id" prefWidth="150" text="Product ID" 
+                                        style="-fx-text-fill: black;" />
+                            <TableColumn fx:id="data_name" prefWidth="300" text="Product Name" 
+                                        style="-fx-text-fill: black;" />
+                            <TableColumn fx:id="data_pw" prefWidth="150" text="Price ($)" 
+                                        style="-fx-text-fill: black;" />
+                            <TableColumn fx:id="stocks" prefWidth="150" text="Stock Level" 
+                                        style="-fx-text-fill: black;" />
+                        </columns>
+                    </TableView>
+                </children>
+            </VBox>
+        </children>
+    </HBox>
+    
+    <!-- Footer with improved design -->
+    <VBox layoutX="0" layoutY="750" prefWidth="1400" alignment="CENTER">
+        <children>
+            <Text text="☕ Coffee Management Store - Professional Inventory Management System ☕" 
+                  style="-fx-font-size: 17px; -fx-fill: #8d6748;" />
+        </children>
+    </VBox>
+    
+    <!-- Decorative element - only the bottom right one -->
+    <Text text="☕" layoutX="1360" layoutY="740" style="-fx-font-size: 24px; -fx-fill: #e6d3b3;" />
+</children>
+</AnchorPane>

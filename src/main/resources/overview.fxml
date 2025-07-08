@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="root" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.groupproject.LoginController">
+   <children>
+      <!-- Background rectangle -->
+      <Rectangle width="800" height="600" fill="transparent" />
+      
+      <!-- Header -->
+      <VBox layoutX="0" layoutY="25" prefWidth="800" alignment="CENTER" spacing="12">
+         <children>
+            <Text fx:id="welcomeMessage" text="Welcome to Coffee Management Store!" styleClass="welcome-text" />
+            <Text text="Choose an option to get started" styleClass="subtitle-text" />
+         </children>
+      </VBox>
+      
+      <!-- Main content area with buttons -->
+      <VBox layoutX="100" layoutY="120" prefWidth="600" prefHeight="420" spacing="30" alignment="CENTER">
+         <children>
+            <!-- Inventory Management Button -->
+            <VBox styleClass="card" prefWidth="550" prefHeight="90" spacing="10" alignment="CENTER">
+               <children>
+                  <Button text="📦 Inventory Management" onAction="#goToInventory" 
+                          style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-background-color: #a67c52; -fx-text-fill: #fffaf3; -fx-background-radius: 12; -fx-padding: 12 25 12 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 0);" 
+                          prefWidth="450" prefHeight="55" />
+                  <Text text="View and manage your coffee products, track stock levels, and update product information." 
+                        style="-fx-font-size: 12px; -fx-fill: #a67c52; -fx-text-alignment: center;" 
+                        wrappingWidth="400" textAlignment="CENTER" />
+               </children>
+            </VBox>
+            
+            <!-- Create Invoice Button -->
+            <VBox styleClass="card" prefWidth="550" prefHeight="90" spacing="10" alignment="CENTER">
+               <children>
+                  <Button text="📄 Create Invoice" onAction="#goToInvoice" 
+                          style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-background-color: #a67c52; -fx-text-fill: #fffaf3; -fx-background-radius: 12; -fx-padding: 12 25 12 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 0);" 
+                          prefWidth="450" prefHeight="55" />
+                  <Text text="Generate invoices for customers, track sales, and manage billing information." 
+                        style="-fx-font-size: 12px; -fx-fill: #a67c52; -fx-text-alignment: center;" 
+                        wrappingWidth="400" textAlignment="CENTER" />
+               </children>
+            </VBox>
+            
+            <!-- Restock Management Button -->
+            <VBox styleClass="card" prefWidth="550" prefHeight="90" spacing="10" alignment="CENTER">
+               <children>
+                  <Button text="🔄 Restock Management" onAction="#goToRestock" 
+                          style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-background-color: #a67c52; -fx-text-fill: #fffaf3; -fx-background-radius: 12; -fx-padding: 12 25 12 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 0);" 
+                          prefWidth="450" prefHeight="55" />
+                  <Text text="Manage inventory restocking, track low stock items, and update product quantities." 
+                        style="-fx-font-size: 12px; -fx-fill: #a67c52; -fx-text-alignment: center;" 
+                        wrappingWidth="400" textAlignment="CENTER" />
+               </children>
+            </VBox>
+            
+            <!-- Logout Button -->
+            <VBox styleClass="card" prefWidth="550" prefHeight="80" spacing="8" alignment="CENTER">
+               <children>
+                  <Button text="🚪 Logout" onAction="#logoutAction" 
+                          style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-background-color: #e74c3c; -fx-text-fill: #fff; -fx-background-radius: 12; -fx-padding: 10 25 10 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 0);" 
+                          prefWidth="450" prefHeight="45" />
+                  <Text text="Sign out of the system and return to login screen." 
+                        style="-fx-font-size: 12px; -fx-fill: #e74c3c; -fx-text-alignment: center;" 
+                        wrappingWidth="400" textAlignment="CENTER" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      
+      <!-- Footer -->
+      <VBox layoutX="0" layoutY="570" prefWidth="800" alignment="CENTER">
+         <children>
+            <Text text="☕ Coffee Management Store - Professional Inventory Management System ☕" 
+                  style="-fx-font-size: 13px; -fx-fill: #8d6748;" />
+         </children>
+      </VBox>
+      
+      <!-- Decorative elements -->
+      <Text text="☕" layoutX="30" layoutY="85" style="-fx-font-size: 18px; -fx-fill: #e6d3b3;" />
+      <Text text="☕" layoutX="750" layoutY="520" style="-fx-font-size: 18px; -fx-fill: #e6d3b3;" />
+      <Text text="☕" layoutX="710" layoutY="120" style="-fx-font-size: 16px; -fx-fill: #e6d3b3;" />
+      <Text text="☕" layoutX="90" layoutY="480" style="-fx-font-size: 16px; -fx-fill: #e6d3b3;" />
+   </children>
+</AnchorPane>
