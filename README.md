@@ -154,13 +154,6 @@ This project is open source.
 - H2 Database for the lightweight database solution
 - Coffee community for inspiration
 
-## 📞 Support
-
-If you encounter any issues or have questions, please:
-1. Check the troubleshooting section above
-2. Search existing issues
-3. Create a new issue with detailed information
-
 ---
 
 **Enjoy managing your coffee shop! ☕** 
